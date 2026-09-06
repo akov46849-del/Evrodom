@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ЕвроДом — окна и двери в Ревде</title>
+
+    <meta name="description"
+          content="ЕвроДом — салон окон и дверей в Ревде. Окна, межкомнатные двери, лоджии, входные группы, натяжные потолки, ламинат, линолеум, жалюзи и шкафы-купе.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #fff;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid #e5e5e5;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            color: #d71920;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #171717;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #d71920;
+        }
+
+        .working-time {
+            padding-left: 28px;
+            border-left: 1px solid #ddd;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            position: relative;
+            overflow: hidden;
+            background: #151515;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.78),
+                    rgba(0,0,0,.35) 60%,
+                    rgba(0,0,0,.1)
+                );
+        }
+
+        .hero-inner {
+            position: relative;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 620px;
+            color: white;
+        }
+
+        .red-label {
+            color: #ff3b42;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(55px, 8vw, 95px);
+            line-height: .95;
+            letter-spacing: -5px;
+            margin-bottom: 25px;
+        }
+
+        .hero-title {
+            font-size: 25px;
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .hero-text {
+            color: #e4e4e4;
+            font-size: 17px;
+            max-width: 540px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            min-height: 52px;
+            padding: 0 24px;
+            border-radius: 9px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            transition: .2s;
+        }
+
+        .button-red {
+            background: #d71920;
+            color: white;
+        }
+
+        .button-red:hover {
+            background: #b91319;
+        }
+
+        .button-white {
+            background: white;
+            color: #171717;
+        }
+
+        .button-white:hover {
+            background: #eee;
+        }
+
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-light {
+            background: #f6f5f2;
+        }
+
+        .section-header {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 50px;
+            align-items: end;
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            color: #d71920;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: clamp(35px, 4vw, 53px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            color: #171717;
+        }
+
+        .section-header p {
+            color: #777;
+        }
+
+
+        /* SERVICES */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .service {
+            background: white;
+            border: 1px solid #e4e4e4;
+            border-radius: 18px;
+            padding: 28px;
+            min-height: 195px;
+            transition: .25s;
+        }
+
+        .service:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+        }
+
+        .service-number {
+            color: #d71920;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .service h3 {
+            font-size: 20px;
+            color: #171717;
+            margin: 15px 0 8px;
+        }
+
+        .service p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .service:first-child {
+            background: #181818;
+            border-color: #181818;
+        }
+
+        .service:first-child h3 {
+            color: white;
+        }
+
+        .service:first-child p {
+            color: #bbb;
+        }
+
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-text {
+            max-width: 540px;
+        }
+
+        .about-text p {
+            color: #777;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+
+        .hours {
+            border-top: 1px solid #ddd;
+            margin-top: 35px;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 17px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .about-image {
+            height: 440px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+
+        /* GALLERY */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            grid-template-rows: 260px 260px;
+            gap: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item img {
+            transition: .3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+
+        /* CONTACTS */
+
+        .contacts {
+            background: #181818;
+            color: white;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .contacts h2 {
+            color: white;
+        }
+
+        .address {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 30px 0;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 32px;
+        }
+
+        .contact-info small {
+            display: block;
+            color: #888;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            margin-bottom: 7px;
+        }
+
+        .contact-info strong {
+            display: block;
+        }
+
+        .contact-photo {
+            height: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #101010;
+            color: #888;
+            padding: 25px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            font-size: 12px;
+        }
+
+        footer .logo {
+            font-size: 18px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 950px) {
+
+            .working-time {
+                display: none;
+            }
+
+            .header-inner {
+                gap: 20px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-header {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .about-grid,
+            .contacts-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 28px);
+            }
+
+            .header-inner {
+                height: 65px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav {
+                gap: 13px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero,
+            .hero-inner {
+                min-height: 600px;
+            }
+
+            .hero-inner {
+                align-items: flex-end;
+            }
+
+            .hero-content {
+                padding-bottom: 45px;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+
+            .hero-title {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service {
+                min-height: auto;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 190px 190px 190px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-photo {
+                height: 270px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="container header-inner">
+
+        <a href="#top" class="logo">
+            ЕВРО<span>ДОМ</span>
+        </a>
+
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#gallery">Фото</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="working-time">
+            Пн–Пт 09:00–17:30
+        </div>
+
+    </div>
+</header>
+
+
+<main id="top">
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-image">
+        <img src="images/eurodom-1.jpeg"
+             alt="Салон ЕвроДом">
+    </div>
+
+    <div class="container hero-inner">
+
+        <div class="hero-content">
+
+            <div class="red-label">
+                САЛОН ОКОН И ДВЕРЕЙ
+            </div>
+
+            <h1>ЕвроДом</h1>
+
+            <p class="hero-title">
+                Окна, двери и решения для дома
+                в одном месте.
+            </p>
+
+            <p class="hero-text">
+                Подберём материалы для ремонта и
+                поможем выбрать подходящее решение
+                по вашим размерам и задачам.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#contacts"
+                   class="button button-red">
+                    Приехать в салон
+                </a>
+
+                <a href="#services"
+                   class="button button-white">
+                    Посмотреть услуги
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section-light" id="services">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-label">
+                    ЧТО МЫ ПРЕДЛАГАЕМ
+                </div>
+
+                <h2>
+                    Для дома<br>
+                    и ремонта
+                </h2>
+
+            </div>
+
+            <p>
+                В салоне можно подобрать изделия
+                и материалы для разных помещений —
+                от окон и входной группы до напольных
+                покрытий.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <article class="service">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>Окна</h3>
+
+                <p>
+                    Современные оконные решения
+                    для квартиры и дома.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>Межкомнатные двери</h3>
+
+                <p>
+                    Двери разных стилей
+                    и вариантов отделки.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>Входные группы</h3>
+
+                <p>
+                    Решения для входа
+                    и дверные конструкции.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <h3>Лоджии</h3>
+
+                <p>
+                    Остекление и решения
+                    для лоджий.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">
+                    05
+                </div>
+
+                <h3>Натяжные потолки</h3>
+
+                <p>
+                    Материалы и решения
+                    для аккуратного потолка.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">
+                    06
+                </div>
+
+                <h3>Ламинат и линолеум</h3>
+
+                <p>
+                    Напольные покрытия
+                    для ремонта.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">
+                    07
+                </div>
+
+                <h3>Жалюзи</h3>
+
+                <p>
+                    Практичное оформление
+                    окон.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">
+                    08
+                </div>
+
+                <h3>Шкафы-купе и замки</h3>
+
+                <p>
+                    Шкафы-купе и замки
+                    к входным дверям.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section>
+
+    <div class="container about-grid">
+
+        <div class="about-text">
+
+            <div class="section-label">
+                ЕВРОДОМ · РЕВДА
+            </div>
+
+            <h2>
+                Загляните<br>
+                в наш салон
+            </h2>
+
+            <p>
+                Мы собрали в одном месте образцы
+                дверей, отделки и материалов, чтобы
+                было проще сравнить варианты
+                и выбрать подходящее решение.
+            </p>
+
+
+            <div class="hours">
+
+                <div class="hours-row">
+                    <strong>Пн–Пт</strong>
+                    <span>09:00–17:30</span>
+                </div>
+
+                <div class="hours-row">
+                    <strong>Сб, Вс</strong>
+                    <span>выходной</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-image">
+
+            <img src="images/eurodom-2.jpeg"
+                 alt="Двери в салоне ЕвроДом">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="section-light" id="gallery">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-label">
+                    НАШ САЛОН
+                </div>
+
+                <h2>
+                    Фото
+                </h2>
+
+            </div>
+
+            <p>
+                Фотографии салона и представленных
+                образцов продукции.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item tall">
+
+                <img src="images/eurodom-3.jpeg"
+                     alt="Двери в салоне ЕвроДом">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/eurodom-4.jpeg"
+                     alt="Образцы материалов">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/eurodom-2.jpeg"
+                     alt="Выставочный зал">
+
+            </div>
+
+
+            <div class="gallery-item wide">
+
+                <img src="images/eurodom-1.jpeg"
+                     alt="Фасад ЕвроДом">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACTS -->
+
+<section class="contacts" id="contacts">
+
+    <div class="container contacts-grid">
+
+        <div>
+
+            <div class="section-label">
+                КОНТАКТЫ
+            </div>
+
+            <h2>
+                Ждём вас<br>
+                в салоне
+            </h2>
+
+            <div class="address">
+                г. Ревда,<br>
+                ул. Максима Горького, 41
+            </div>
+
+
+            <div class="contact-info">
+
+                <div>
+
+                    <small>
+                        Время работы
+                    </small>
+
+                    <strong>
+                        Пн–Пт: 09:00–17:30
+                    </strong>
+
+                    <strong>
+                        Сб, Вс: выходной
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        Телефоны
+                    </small>
+
+                    <strong>
+                        Добавим номер телефона
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://yandex.ru/maps/?text=Ревда%2C%20улица%20Максима%20Горького%2C%2041"
+                target="_blank"
+                class="button button-red">
+
+                Открыть адрес на карте
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-photo">
+
+            <img src="images/eurodom-1.jpeg"
+                 alt="Вход в салон ЕвроДом">
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="logo">
+            ЕВРО<span>ДОМ</span>
+        </div>
+
+        <div>
+            © 2026 ИП Жовтюк В.В.
+        </div>
+
+        <div>
+            Ревда · Максима Горького, 41
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
