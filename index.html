@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <title>ЕвроДом — окна и двери в Ревде</title>
 
     <meta name="description"
-          content="ЕвроДом — салон окон и дверей в Ревде. Окна, межкомнатные двери, лоджии, входные группы, натяжные потолки, ламинат, линолеум, жалюзи и шкафы-купе.">
+          content="ЕвроДом — салон окон и дверей в Ревде. Окна, двери, лоджии, входные группы, натяжные потолки, ламинат, линолеум, жалюзи и шкафы-купе.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -41,16 +43,18 @@
 
         .container {
             width: min(1180px, calc(100% - 40px));
-            margin: 0 auto;
+            margin: auto;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(255,255,255,0.96);
+            background: rgba(255,255,255,.97);
             border-bottom: 1px solid #e5e5e5;
             backdrop-filter: blur(10px);
         }
@@ -59,14 +63,15 @@
             height: 76px;
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 35px;
         }
 
         .logo {
             font-size: 25px;
             font-weight: 900;
-            color: #d71920;
             letter-spacing: 1px;
+            color: #d71920;
+            white-space: nowrap;
         }
 
         .logo span {
@@ -76,28 +81,33 @@
         nav {
             margin-left: auto;
             display: flex;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
             font-size: 14px;
             font-weight: 700;
-            transition: 0.2s;
+            transition: .2s;
         }
 
         nav a:hover {
             color: #d71920;
         }
 
-        .working-time {
-            padding-left: 28px;
-            border-left: 1px solid #ddd;
-            font-size: 13px;
-            font-weight: 700;
+        .header-phone {
+            font-size: 14px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .header-phone:hover {
+            color: #d71920;
         }
 
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 650px;
@@ -115,29 +125,31 @@
             content: "";
             position: absolute;
             inset: 0;
+
             background:
                 linear-gradient(
                     90deg,
-                    rgba(0,0,0,.78),
-                    rgba(0,0,0,.35) 60%,
+                    rgba(0,0,0,.82),
+                    rgba(0,0,0,.38) 60%,
                     rgba(0,0,0,.1)
                 );
         }
 
         .hero-inner {
-            position: relative;
             min-height: 650px;
+            position: relative;
+
             display: flex;
             align-items: center;
         }
 
         .hero-content {
-            max-width: 620px;
+            max-width: 650px;
             color: white;
         }
 
         .red-label {
-            color: #ff3b42;
+            color: #ff4046;
             font-size: 12px;
             font-weight: 900;
             letter-spacing: 2px;
@@ -152,33 +164,37 @@
         }
 
         .hero-title {
-            font-size: 25px;
+            font-size: 26px;
             line-height: 1.25;
             margin-bottom: 18px;
         }
 
         .hero-text {
-            color: #e4e4e4;
+            max-width: 560px;
+            color: #ddd;
             font-size: 17px;
-            max-width: 540px;
         }
 
         .buttons {
             display: flex;
+            flex-wrap: wrap;
             gap: 12px;
             margin-top: 32px;
-            flex-wrap: wrap;
         }
 
         .button {
             min-height: 52px;
             padding: 0 24px;
-            border-radius: 9px;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
+
+            border-radius: 9px;
+
             font-size: 14px;
+            font-weight: 800;
+
             transition: .2s;
         }
 
@@ -189,6 +205,7 @@
 
         .button-red:hover {
             background: #b91319;
+            transform: translateY(-2px);
         }
 
         .button-white {
@@ -198,40 +215,52 @@
 
         .button-white:hover {
             background: #eee;
+            transform: translateY(-2px);
         }
 
 
-        /* SECTIONS */
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
             padding: 100px 0;
         }
 
-        .section-light {
+        .gray {
             background: #f6f5f2;
         }
 
         .section-header {
             display: grid;
             grid-template-columns: 1fr 420px;
+
             gap: 50px;
+
             align-items: end;
+
             margin-bottom: 45px;
         }
 
         .section-label {
             color: #d71920;
+
             font-size: 12px;
             font-weight: 900;
+
             letter-spacing: 2px;
+
             margin-bottom: 12px;
         }
 
         h2 {
-            font-size: clamp(35px, 4vw, 53px);
-            line-height: 1.05;
-            letter-spacing: -2px;
             color: #171717;
+
+            font-size: clamp(35px, 4vw, 53px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
         }
 
         .section-header p {
@@ -239,47 +268,64 @@
         }
 
 
-        /* SERVICES */
+        /* =========================
+           SERVICES
+        ========================= */
 
         .services-grid {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             gap: 15px;
         }
 
         .service {
             background: white;
+
             border: 1px solid #e4e4e4;
+
             border-radius: 18px;
+
             padding: 28px;
-            min-height: 195px;
+
+            min-height: 190px;
+
             transition: .25s;
         }
 
         .service:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,.08);
         }
 
         .service-number {
             color: #d71920;
+
             font-size: 12px;
+
             font-weight: 900;
         }
 
         .service h3 {
-            font-size: 20px;
             color: #171717;
+
+            font-size: 20px;
+
             margin: 15px 0 8px;
         }
 
         .service p {
             color: #777;
+
             font-size: 14px;
         }
 
         .service:first-child {
             background: #181818;
+
             border-color: #181818;
         }
 
@@ -292,56 +338,215 @@
         }
 
 
-        /* ABOUT */
+        /* =========================
+           WHY US
+        ========================= */
 
-        .about-grid {
+        .why {
+            background: white;
+        }
+
+        .why-grid {
             display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-top: 45px;
+        }
+
+        .why-card {
+            border-top: 3px solid #d71920;
+
+            background: #f7f7f7;
+
+            padding: 28px;
+
+            border-radius: 0 0 16px 16px;
+        }
+
+        .why-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #d71920;
+
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 22px;
+
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 19px;
+
+            margin-bottom: 8px;
+
+            color: #171717;
+        }
+
+        .why-card p {
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CALCULATION
+        ========================= */
+
+        .calculation {
+            background: #d71920;
+
+            color: white;
+        }
+
+        .calc-grid {
+            display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
-        .about-text {
-            max-width: 540px;
+        .calculation h2 {
+            color: white;
         }
 
-        .about-text p {
-            color: #777;
+        .calculation .section-label {
+            color: white;
+        }
+
+        .calc-description {
+            color: rgba(255,255,255,.82);
+
             font-size: 17px;
+
             margin-top: 20px;
+
+            max-width: 500px;
         }
 
-        .hours {
-            border-top: 1px solid #ddd;
-            margin-top: 35px;
-        }
+        .calc-form {
+            background: white;
 
-        .hours-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 17px 0;
-            border-bottom: 1px solid #ddd;
-        }
+            color: #222;
 
-        .about-image {
-            height: 440px;
+            padding: 35px;
+
             border-radius: 20px;
-            overflow: hidden;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.18);
+        }
+
+        .calc-form h3 {
+            color: #171717;
+
+            font-size: 25px;
+
+            margin-bottom: 22px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            margin-bottom: 7px;
+
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+
+            padding: 14px;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #d71920;
+        }
+
+        .form-group textarea {
+            height: 90px;
+
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+
+            border: none;
+
+            cursor: pointer;
+
+            margin-top: 5px;
+        }
+
+        .form-note {
+            font-size: 11px;
+
+            color: #999;
+
+            margin-top: 12px;
+
+            text-align: center;
         }
 
 
-        /* GALLERY */
+        /* =========================
+           GALLERY
+        ========================= */
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            grid-template-rows: 260px 260px;
+
+            grid-template-columns:
+                1.2fr 1fr 1fr;
+
+            grid-template-rows:
+                260px 260px;
+
             gap: 15px;
         }
 
         .gallery-item {
-            border-radius: 18px;
             overflow: hidden;
+
+            border-radius: 18px;
         }
 
         .gallery-item.tall {
@@ -361,71 +566,147 @@
         }
 
 
-        /* CONTACTS */
+        /* =========================
+           CONTACTS + MAP
+        ========================= */
 
         .contacts {
             background: #181818;
-            color: white;
-        }
 
-        .contacts-grid {
-            display: grid;
-            grid-template-columns: 1.1fr .9fr;
-            gap: 65px;
-            align-items: center;
+            color: white;
         }
 
         .contacts h2 {
             color: white;
         }
 
+        .contacts-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 60px;
+
+            align-items: start;
+        }
+
         .address {
             font-size: 25px;
+
             font-weight: 800;
+
             margin: 30px 0;
         }
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 32px;
+        .contact-block {
+            border-top: 1px solid #3a3a3a;
+
+            padding: 20px 0;
         }
 
-        .contact-info small {
+        .contact-block small {
             display: block;
-            color: #888;
-            text-transform: uppercase;
+
+            color: #999;
+
             font-size: 10px;
+
             letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
             font-weight: 800;
+
             margin-bottom: 7px;
         }
 
-        .contact-info strong {
+        .contact-block strong {
             display: block;
+
+            font-size: 17px;
         }
 
-        .contact-photo {
-            height: 380px;
+        .contact-phone {
+            color: white;
+
+            transition: .2s;
+        }
+
+        .contact-phone:hover {
+            color: #ff4046;
+        }
+
+        .social-buttons {
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+        }
+
+        .social {
+            padding: 13px 18px;
+
+            border: 1px solid #444;
+
+            border-radius: 8px;
+
+            font-weight: 700;
+
+            font-size: 13px;
+
+            transition: .2s;
+        }
+
+        .social:hover {
+            background: #d71920;
+
+            border-color: #d71920;
+        }
+
+        .map {
+            height: 430px;
+
             border-radius: 20px;
+
             overflow: hidden;
+
+            background: #ddd;
+        }
+
+        .map iframe {
+            width: 100%;
+
+            height: 100%;
+
+            border: 0;
         }
 
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #101010;
+
             color: #888;
+
             padding: 25px 0;
         }
 
         .footer-inner {
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             gap: 20px;
+
             font-size: 12px;
         }
 
@@ -434,36 +715,37 @@
         }
 
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 950px) {
 
-            .working-time {
+            .header-phone {
                 display: none;
             }
 
-            .header-inner {
-                gap: 20px;
-            }
-
-            nav {
-                gap: 18px;
-            }
-
             .services-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2,1fr);
             }
 
             .section-header {
                 grid-template-columns: 1fr;
+
                 gap: 20px;
             }
 
-            .about-grid,
+            .calc-grid,
             .contacts-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+
+                gap: 40px;
             }
+
         }
 
 
@@ -475,6 +757,8 @@
 
             .header-inner {
                 height: 65px;
+
+                gap: 15px;
             }
 
             .logo {
@@ -514,7 +798,8 @@
                 padding: 70px 0;
             }
 
-            .services-grid {
+            .services-grid,
+            .why-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -522,38 +807,41 @@
                 min-height: auto;
             }
 
-            .about-image {
-                height: 300px;
+            .calc-form {
+                padding: 25px;
             }
 
             .gallery-grid {
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 190px 190px 190px;
+
+                grid-template-rows:
+                    190px 190px 190px;
             }
 
-            .contact-info {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .contact-photo {
-                height: 270px;
+            .map {
+                height: 300px;
             }
 
             .footer-inner {
                 flex-direction: column;
+
                 align-items: flex-start;
             }
         }
+
     </style>
 </head>
 
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
+
     <div class="container header-inner">
 
         <a href="#top" class="logo">
@@ -561,29 +849,57 @@
         </a>
 
         <nav>
-            <a href="#services">Услуги</a>
-            <a href="#gallery">Фото</a>
-            <a href="#contacts">Контакты</a>
+
+            <a href="#services">
+                Услуги
+            </a>
+
+            <a href="#why">
+                О нас
+            </a>
+
+            <a href="#gallery">
+                Фото
+            </a>
+
+            <a href="#contacts">
+                Контакты
+            </a>
+
         </nav>
 
-        <div class="working-time">
-            Пн–Пт 09:00–17:30
-        </div>
+        <!-- ПОТОМ ЗАМЕНИТЕ НА РЕАЛЬНЫЙ НОМЕР -->
+
+        <a
+            class="header-phone"
+            href="tel:+70000000000">
+
+            +7 XXX XXX-XX-XX
+
+        </a>
 
     </div>
+
 </header>
 
 
 <main id="top">
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
     <div class="hero-image">
-        <img src="images/eurodom-1.jpeg"
-             alt="Салон ЕвроДом">
+
+        <img
+            src="images/eurodom-1.jpeg"
+            alt="Салон ЕвроДом в Ревде">
+
     </div>
+
 
     <div class="container hero-inner">
 
@@ -593,29 +909,39 @@
                 САЛОН ОКОН И ДВЕРЕЙ
             </div>
 
-            <h1>ЕвроДом</h1>
+            <h1>
+                ЕвроДом
+            </h1>
 
             <p class="hero-title">
-                Окна, двери и решения для дома
-                в одном месте.
+                Окна, двери и решения
+                для дома в одном месте.
             </p>
 
             <p class="hero-text">
-                Подберём материалы для ремонта и
-                поможем выбрать подходящее решение
-                по вашим размерам и задачам.
+                Окна, межкомнатные двери, лоджии,
+                входные группы, натяжные потолки,
+                напольные покрытия, жалюзи
+                и шкафы-купе.
             </p>
+
 
             <div class="buttons">
 
-                <a href="#contacts"
-                   class="button button-red">
-                    Приехать в салон
+                <a
+                    href="#calculation"
+                    class="button button-red">
+
+                    Получить расчёт
+
                 </a>
 
-                <a href="#services"
-                   class="button button-white">
-                    Посмотреть услуги
+                <a
+                    href="tel:+70000000000"
+                    class="button button-white">
+
+                    📞 Позвонить
+
                 </a>
 
             </div>
@@ -627,9 +953,12 @@
 </section>
 
 
-<!-- SERVICES -->
 
-<section class="section-light" id="services">
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="gray" id="services">
 
     <div class="container">
 
@@ -649,10 +978,9 @@
             </div>
 
             <p>
-                В салоне можно подобрать изделия
-                и материалы для разных помещений —
-                от окон и входной группы до напольных
-                покрытий.
+                В нашем салоне можно подобрать
+                изделия и материалы для разных
+                помещений.
             </p>
 
         </div>
@@ -660,13 +988,16 @@
 
         <div class="services-grid">
 
+
             <article class="service">
 
                 <div class="service-number">
                     01
                 </div>
 
-                <h3>Окна</h3>
+                <h3>
+                    Окна
+                </h3>
 
                 <p>
                     Современные оконные решения
@@ -682,7 +1013,9 @@
                     02
                 </div>
 
-                <h3>Межкомнатные двери</h3>
+                <h3>
+                    Межкомнатные двери
+                </h3>
 
                 <p>
                     Двери разных стилей
@@ -698,7 +1031,9 @@
                     03
                 </div>
 
-                <h3>Входные группы</h3>
+                <h3>
+                    Входные группы
+                </h3>
 
                 <p>
                     Решения для входа
@@ -714,7 +1049,9 @@
                     04
                 </div>
 
-                <h3>Лоджии</h3>
+                <h3>
+                    Лоджии
+                </h3>
 
                 <p>
                     Остекление и решения
@@ -730,7 +1067,9 @@
                     05
                 </div>
 
-                <h3>Натяжные потолки</h3>
+                <h3>
+                    Натяжные потолки
+                </h3>
 
                 <p>
                     Материалы и решения
@@ -746,7 +1085,9 @@
                     06
                 </div>
 
-                <h3>Ламинат и линолеум</h3>
+                <h3>
+                    Ламинат и линолеум
+                </h3>
 
                 <p>
                     Напольные покрытия
@@ -762,7 +1103,9 @@
                     07
                 </div>
 
-                <h3>Жалюзи</h3>
+                <h3>
+                    Жалюзи
+                </h3>
 
                 <p>
                     Практичное оформление
@@ -778,7 +1121,9 @@
                     08
                 </div>
 
-                <h3>Шкафы-купе и замки</h3>
+                <h3>
+                    Шкафы-купе и замки
+                </h3>
 
                 <p>
                     Шкафы-купе и замки
@@ -787,6 +1132,7 @@
 
             </article>
 
+
         </div>
 
     </div>
@@ -794,63 +1140,286 @@
 </section>
 
 
-<!-- ABOUT -->
 
-<section>
+<!-- =========================
+     WHY EURODOM
+========================= -->
 
-    <div class="container about-grid">
+<section id="why">
 
-        <div class="about-text">
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-label">
+                    ПОЧЕМУ ЕВРОДОМ
+                </div>
+
+                <h2>
+                    Всё необходимое
+                    для ремонта
+                </h2>
+
+            </div>
+
+            <p>
+                Поможем определиться с подходящим
+                вариантом и подобрать материалы
+                для вашего дома.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Салон в Ревде
+                </h3>
+
+                <p>
+                    Можно приехать в салон,
+                    посмотреть образцы
+                    и пообщаться со специалистом.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    Большой выбор
+                </h3>
+
+                <p>
+                    Окна, двери, покрытия,
+                    жалюзи, потолки
+                    и другие решения.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ★
+                </div>
+
+                <h3>
+                    Поможем выбрать
+                </h3>
+
+                <p>
+                    Расскажем о вариантах
+                    и поможем подобрать решение
+                    под ваши задачи.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    №
+                </div>
+
+                <h3>
+                    Всё в одном месте
+                </h3>
+
+                <p>
+                    Не нужно искать разные
+                    магазины для окон, дверей
+                    и ремонта.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CALCULATION FORM
+========================= -->
+
+<section class="calculation" id="calculation">
+
+    <div class="container calc-grid">
+
+
+        <div>
 
             <div class="section-label">
-                ЕВРОДОМ · РЕВДА
+                БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
             </div>
 
             <h2>
-                Загляните<br>
-                в наш салон
+                Получите
+                предварительный
+                расчёт
             </h2>
 
-            <p>
-                Мы собрали в одном месте образцы
-                дверей, отделки и материалов, чтобы
-                было проще сравнить варианты
-                и выбрать подходящее решение.
+            <p class="calc-description">
+                Оставьте свои данные и расскажите,
+                что вам необходимо. Мы свяжемся
+                с вами и поможем с выбором.
             </p>
 
+        </div>
 
-            <div class="hours">
 
-                <div class="hours-row">
-                    <strong>Пн–Пт</strong>
-                    <span>09:00–17:30</span>
-                </div>
+        <form
+            class="calc-form"
+            onsubmit="sendForm(event)">
 
-                <div class="hours-row">
-                    <strong>Сб, Вс</strong>
-                    <span>выходной</span>
-                </div>
+            <h3>
+                Оставить заявку
+            </h3>
+
+
+            <div class="form-group">
+
+                <label>
+                    Ваше имя
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Например, Иван"
+                    required>
 
             </div>
 
-        </div>
+
+            <div class="form-group">
+
+                <label>
+                    Телефон
+                </label>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 ___ ___-__-__"
+                    required>
+
+            </div>
 
 
-        <div class="about-image">
+            <div class="form-group">
 
-            <img src="images/eurodom-2.jpeg"
-                 alt="Двери в салоне ЕвроДом">
+                <label>
+                    Что вас интересует?
+                </label>
 
-        </div>
+                <select name="service">
+
+                    <option>
+                        Окна
+                    </option>
+
+                    <option>
+                        Межкомнатные двери
+                    </option>
+
+                    <option>
+                        Входные двери
+                    </option>
+
+                    <option>
+                        Лоджии
+                    </option>
+
+                    <option>
+                        Натяжные потолки
+                    </option>
+
+                    <option>
+                        Ламинат / линолеум
+                    </option>
+
+                    <option>
+                        Жалюзи
+                    </option>
+
+                    <option>
+                        Шкаф-купе
+                    </option>
+
+                    <option>
+                        Другое
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Комментарий
+                </label>
+
+                <textarea
+                    name="message"
+                    placeholder="Напишите размеры или задайте вопрос"></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="button button-red form-submit">
+
+                Получить расчёт
+
+            </button>
+
+
+            <div class="form-note">
+
+                Нажимая кнопку, вы соглашаетесь
+                на обработку данных.
+
+            </div>
+
+        </form>
 
     </div>
 
 </section>
 
 
-<!-- GALLERY -->
 
-<section class="section-light" id="gallery">
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gray" id="gallery">
 
     <div class="container">
 
@@ -869,8 +1438,8 @@
             </div>
 
             <p>
-                Фотографии салона и представленных
-                образцов продукции.
+                Посмотрите фотографии салона
+                и представленных образцов.
             </p>
 
         </div>
@@ -878,36 +1447,42 @@
 
         <div class="gallery-grid">
 
+
             <div class="gallery-item tall">
 
-                <img src="images/eurodom-3.jpeg"
-                     alt="Двери в салоне ЕвроДом">
+                <img
+                    src="images/eurodom-3.jpeg"
+                    alt="Двери в салоне ЕвроДом">
 
             </div>
 
 
             <div class="gallery-item">
 
-                <img src="images/eurodom-4.jpeg"
-                     alt="Образцы материалов">
+                <img
+                    src="images/eurodom-4.jpeg"
+                    alt="Образцы материалов">
 
             </div>
 
 
             <div class="gallery-item">
 
-                <img src="images/eurodom-2.jpeg"
-                     alt="Выставочный зал">
+                <img
+                    src="images/eurodom-2.jpeg"
+                    alt="Выставочный зал ЕвроДом">
 
             </div>
 
 
             <div class="gallery-item wide">
 
-                <img src="images/eurodom-1.jpeg"
-                     alt="Фасад ЕвроДом">
+                <img
+                    src="images/eurodom-1.jpeg"
+                    alt="Фасад ЕвроДом">
 
             </div>
+
 
         </div>
 
@@ -916,11 +1491,15 @@
 </section>
 
 
-<!-- CONTACTS -->
+
+<!-- =========================
+     CONTACTS
+========================= -->
 
 <section class="contacts" id="contacts">
 
     <div class="container contacts-grid">
+
 
         <div>
 
@@ -933,62 +1512,98 @@
                 в салоне
             </h2>
 
+
             <div class="address">
+
                 г. Ревда,<br>
                 ул. Максима Горького, 41
-            </div>
-
-
-            <div class="contact-info">
-
-                <div>
-
-                    <small>
-                        Время работы
-                    </small>
-
-                    <strong>
-                        Пн–Пт: 09:00–17:30
-                    </strong>
-
-                    <strong>
-                        Сб, Вс: выходной
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <small>
-                        Телефоны
-                    </small>
-
-                    <strong>
-                        Добавим номер телефона
-                    </strong>
-
-                </div>
 
             </div>
 
 
-            <a
-                href="https://yandex.ru/maps/?text=Ревда%2C%20улица%20Максима%20Горького%2C%2041"
-                target="_blank"
-                class="button button-red">
+            <div class="contact-block">
 
-                Открыть адрес на карте
+                <small>
+                    Время работы
+                </small>
 
-            </a>
+                <strong>
+                    Пн–Пт: 09:00–17:30
+                </strong>
+
+                <strong>
+                    Сб, Вс: выходной
+                </strong>
+
+            </div>
+
+
+            <div class="contact-block">
+
+                <small>
+                    Телефон
+                </small>
+
+                <!-- ЗАМЕНИТЕ НОМЕР -->
+
+                <a
+                    class="contact-phone"
+                    href="tel:+70000000000">
+
+                    <strong>
+                        +7 XXX XXX-XX-XX
+                    </strong>
+
+                </a>
+
+            </div>
+
+
+            <div class="social-buttons">
+
+                <!-- ЗАМЕНИТЕ ССЫЛКИ НА СВОИ -->
+
+                <a
+                    class="social"
+                    href="tel:+70000000000">
+
+                    📞 Позвонить
+
+                </a>
+
+
+                <a
+                    class="social"
+                    href="https://wa.me/70000000000"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
+
+                <a
+                    class="social"
+                    href="https://t.me/"
+                    target="_blank">
+
+                    Telegram
+
+                </a>
+
+            </div>
 
         </div>
 
 
-        <div class="contact-photo">
+        <!-- MAP -->
 
-            <img src="images/eurodom-1.jpeg"
-                 alt="Вход в салон ЕвроДом">
+        <div class="map">
+
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?text=Ревда%2C%20улица%20Максима%20Горького%2C%2041&z=17"
+                allowfullscreen="true">
+            </iframe>
 
         </div>
 
@@ -996,10 +1611,14 @@
 
 </section>
 
+
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1014,12 +1633,60 @@
         </div>
 
         <div>
-            Ревда · Максима Горького, 41
+            Ревда · ул. Максима Горького, 41
         </div>
 
     </div>
 
 </footer>
+
+
+
+<script>
+
+function sendForm(event) {
+
+    event.preventDefault();
+
+    const form = event.target;
+
+    const name =
+        form.querySelector('[name="name"]').value;
+
+    const phone =
+        form.querySelector('[name="phone"]').value;
+
+    const service =
+        form.querySelector('[name="service"]').value;
+
+    const message =
+        form.querySelector('[name="message"]').value;
+
+
+    /*
+       ПОКА ФОРМА ПОКАЗЫВАЕТ СООБЩЕНИЕ.
+
+       Позже можно подключить:
+       - отправку на почту;
+       - Telegram;
+       - WhatsApp;
+       - CRM.
+    */
+
+
+    alert(
+        "Спасибо, " + name +
+        "!\n\n" +
+        "Ваша заявка принята.\n" +
+        "Телефон: " + phone +
+        "\n" +
+        "Интересует: " + service
+    );
+
+    form.reset();
+}
+
+</script>
 
 
 </body>
